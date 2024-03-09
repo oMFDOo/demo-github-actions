@@ -30,8 +30,7 @@ jobs:
           context: .
           push: true
           tags: ${{ env.ECR_REPOSITORY_NAME }}:${{ github.sha}}
-          
-    deploy:
+  deploy:
       runs-on: ubuntu-latest
       needs: push
       steps:
